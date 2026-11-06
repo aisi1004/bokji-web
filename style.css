@@ -1,0 +1,105 @@
+:root{--bg:#f5f7fa;--card:#fff;--ink:#16202c;--sub:#5d6b7a;--line:#e3e8ee;--pri:#1b64f2;--priSoft:#e8f0fe;--ok:#12a37f;--warn:#e8590c;--warnSoft:#fff1e6}
+@media(prefers-color-scheme:dark){:root{--bg:#10151b;--card:#1a212a;--ink:#eef2f6;--sub:#9aa8b6;--line:#2a343f;--pri:#5b8cff;--priSoft:#1d2a44;--ok:#3ccfa5;--warn:#ff9a52;--warnSoft:#3a2a1c}}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans KR","Malgun Gothic",system-ui,sans-serif;font-size:17px;line-height:1.5}
+button{font:inherit;color:inherit;cursor:pointer}
+#app{padding-top:calc(var(--stb,0px) + var(--adh,0px) + var(--adtop,0px));max-width:480px;margin:0 auto;min-height:100vh;display:flex;flex-direction:column;background:var(--bg)}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;position:sticky;top:calc(var(--stb,0px) + var(--adh,0px) + var(--adtop,0px));background:var(--bg);z-index:5}
+.logo{font-weight:800;font-size:22px;color:var(--pri)}
+.hbtns{display:flex;gap:8px;align-items:center}
+.gear{font-size:20px;line-height:1;padding:5px 10px}
+.srow{display:flex;justify-content:space-between;align-items:center;width:100%;border:0;background:none;padding:14px 0;border-bottom:1px solid var(--line);text-align:left;font-size:16px}
+.srow .meta{font-size:13px}
+.ghost{border:1px solid var(--line);background:var(--card);border-radius:20px;padding:6px 14px;font-size:14px}
+main{flex:1;padding:0 16px 96px}
+.tabs{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;display:flex;background:var(--card);border-top:1px solid var(--line);padding-bottom:max(env(safe-area-inset-bottom,0px),var(--safe-area-inset-bottom,0px));z-index:10}
+.tabs button{flex:1;border:0;background:none;padding:8px 0 10px;font-size:13px;color:var(--sub);display:flex;flex-direction:column;align-items:center;gap:2px}
+.tabs button i{font-style:normal;font-size:20px}
+.tabs button.on{color:var(--pri);font-weight:700}
+h2{font-size:19px;margin:22px 0 10px}
+.hero{background:var(--priSoft);border-radius:18px;padding:18px}
+.hero b{font-size:20px}
+.hero p{margin:6px 0 0;color:var(--sub);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:20px;padding:7px 14px;font-size:15px}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0;display:block;width:100%;text-align:left}
+.card .t{font-weight:700;font-size:17px;display:block}
+.card .s{color:var(--sub);font-size:14.5px;display:block;margin-top:2px}
+.row{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:8px}
+.tag{font-size:12.5px;border-radius:6px;padding:2px 8px;background:var(--priSoft);color:var(--pri);font-weight:600}
+.tag.d{background:var(--warnSoft);color:var(--warn)}
+.tag.ok{background:#e0f6ee;color:#0b7a5f}
+.amount{color:var(--ok);font-weight:700;font-size:15px}
+.meta{color:var(--sub);font-size:12.5px}
+.banner{margin:16px 0;border:1px dashed var(--line);border-radius:10px;padding:14px;text-align:center;color:var(--sub);font-size:13px}
+.seg{display:flex;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:3px;margin:6px 0}
+.seg button{flex:1;border:0;background:none;border-radius:9px;padding:9px 0;font-size:15px;color:var(--sub)}
+.seg button.on{background:var(--pri);color:#fff;font-weight:700}
+.search{display:flex;gap:8px;margin:8px 0}
+input,select{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 12px;width:100%}
+.btn{border:0;background:var(--pri);color:#fff;border-radius:12px;padding:14px;font-weight:700;width:100%;font-size:17px}
+.btn.sec{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.btn.sm{width:auto;padding:11px 18px}
+.sheet,.onboard,.appopen{position:fixed;inset:0;z-index:50;display:flex;align-items:flex-end;justify-content:center;background:rgba(0,0,0,.45)}
+.hidden{display:none!important}
+.sheet .in{background:var(--card);width:100%;max-width:480px;max-height:90vh;overflow:auto;border-radius:20px 20px 0 0;padding:20px 18px 28px}
+.sheet h3{margin:0 0 4px;font-size:21px}
+.kv{display:grid;grid-template-columns:84px 1fr;gap:6px 10px;margin:14px 0;font-size:15.5px}
+.kv dt{color:var(--sub)}.kv dd{margin:0}
+.notice{background:var(--warnSoft);color:var(--warn);border-radius:10px;padding:10px 12px;font-size:13.5px;margin:12px 0}
+.onboard{align-items:center;background:var(--bg)}
+.onboard .in{width:100%;max-width:480px;padding:24px 18px;height:100%;display:flex;flex-direction:column}
+.prog{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin-bottom:20px}
+.prog i{display:block;height:100%;background:var(--pri)}
+.q{font-size:24px;font-weight:800;margin:6px 0 4px}
+.opts{display:grid;gap:10px;margin:16px 0;flex:1;align-content:start}
+.opt{border:2px solid var(--line);background:var(--card);border-radius:14px;padding:16px;text-align:left;font-size:18px}
+.opt.on{border-color:var(--pri);background:var(--priSoft);font-weight:700}
+.appopen{align-items:center;background:rgba(0,0,0,.85);color:#fff;flex-direction:column;justify-content:center;gap:16px;text-align:center}
+.switch{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.switch input{width:auto}
+.empty{text-align:center;color:var(--sub);padding:40px 0}
+.star{border:0;background:none;font-size:22px}
+
+/* 배너 자리(안전 영역+배너+간격)는 항상 배경색으로 막아 스크롤 내용이 배너 뒤로 지나가 보이지 않게 한다 */
+#app::before{content:"";position:fixed;top:0;left:0;right:0;height:calc(var(--stb,0px) + var(--adh,0px) + var(--adtop,0px));background:var(--bg);z-index:4;pointer-events:none}
+
+.sheet-top{position:sticky;top:-20px;display:flex;justify-content:flex-end;margin:-8px 0 6px;z-index:2;background:var(--card);padding:4px 0}
+.onboard .sheet-top{position:static;background:transparent;margin:0 0 8px}
+.sheet-x{border:1px solid var(--line);background:var(--card);border-radius:20px;padding:8px 16px;font-size:15px;font-weight:600}
+
+.sheet .in{padding-bottom:calc(28px + max(env(safe-area-inset-bottom,0px),var(--safe-area-inset-bottom,0px)))}
+.onboard .in{padding-bottom:calc(24px + max(env(safe-area-inset-bottom,0px),var(--safe-area-inset-bottom,0px)))}
+
+.onboard .in{padding-top:calc(24px + var(--stb,0px))}
+.tabs button{font-size:12px}
+
+.splash{position:fixed;inset:0;z-index:70;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+.splash .logo{font-size:34px}
+
+.dlg{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;padding:24px}
+.dlg .box{background:var(--card);color:var(--ink);border-radius:16px;padding:22px 20px 16px;max-width:420px;width:100%;box-shadow:0 8px 30px rgba(0,0,0,.25)}
+.dlg .msg{font-size:17px;line-height:1.5;margin:0 0 18px;white-space:pre-line}
+.dlg .row{display:flex;gap:8px;justify-content:flex-end;margin:0}
+
+.selbtn{display:block;width:100%;text-align:left;border:1px solid var(--line);background:var(--card);border-radius:12px;padding:13px 14px;font-size:17px}
+.selbtn.small{display:inline-block;width:auto;padding:9px 14px;border-radius:20px;font-size:16px}
+.dlg .pick{max-height:52vh;overflow:auto;display:grid;gap:8px}
+.dlg .pick .opt{padding:13px 14px;font-size:17px}
+.splash img{width:132px;height:132px;border-radius:30px;box-shadow:0 8px 24px rgba(27,100,242,.25)}
+
+#btnProfile{max-width:170px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.frow{display:flex;gap:6px;align-items:center;margin:8px 0}
+.fpick{flex:1;min-width:0;text-align:left;border:2px solid var(--line);background:var(--card);border-radius:14px;padding:12px 14px;font-size:16px;display:flex;flex-direction:column;gap:2px}
+.fpick.on{border-color:var(--pri);background:var(--priSoft)}
+.frow .ghost{padding:8px 12px;font-size:14px;white-space:nowrap}
+.frow .del{color:var(--warn)}
+.nminput{margin-top:10px}
+
+/* 위쪽 프로필 버튼과 설정(⚙) 버튼은 높이를 같게 */
+.hbtns .ghost{height:42px;display:inline-flex;align-items:center;justify-content:center;padding:0 16px;font-size:15px;line-height:1}
+.hbtns .gear{width:42px;padding:0;font-size:20px}
+
+.splash{transition:opacity .3s ease}
+.splash.fade{opacity:0;pointer-events:none}

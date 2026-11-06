@@ -1,0 +1,74 @@
+{
+ "updated": "2026-11-06",
+ "total": 8873,
+ "files": {
+  "전국": {
+   "file": "national.json",
+   "count": 1083
+  },
+  "서울": {
+   "file": "region-서울.json",
+   "count": 912
+  },
+  "부산": {
+   "file": "region-부산.json",
+   "count": 333
+  },
+  "대구": {
+   "file": "region-대구.json",
+   "count": 243
+  },
+  "인천": {
+   "file": "region-인천.json",
+   "count": 309
+  },
+  "전남광주": {
+   "file": "region-전남광주.json",
+   "count": 938
+  },
+  "대전": {
+   "file": "region-대전.json",
+   "count": 123
+  },
+  "울산": {
+   "file": "region-울산.json",
+   "count": 194
+  },
+  "경기": {
+   "file": "region-경기.json",
+   "count": 989
+  },
+  "강원": {
+   "file": "region-강원.json",
+   "count": 493
+  },
+  "충북": {
+   "file": "region-충북.json",
+   "count": 472
+  },
+  "충남": {
+   "file": "region-충남.json",
+   "count": 674
+  },
+  "전북": {
+   "file": "region-전북.json",
+   "count": 603
+  },
+  "경북": {
+   "file": "region-경북.json",
+   "count": 698
+  },
+  "경남": {
+   "file": "region-경남.json",
+   "count": 609
+  },
+  "세종": {
+   "file": "region-세종.json",
+   "count": 63
+  },
+  "제주": {
+   "file": "region-제주.json",
+   "count": 137
+  }
+ }
+}
