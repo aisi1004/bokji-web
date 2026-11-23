@@ -1,0 +1,37 @@
+{
+  "_설명": [
+    "앱 설정입니다. 이 파일을 고쳐서 올리면 앱 업데이트 없이 반영돼요(앱이 켜질 때 읽어요).",
+    "splash.minMs: 시작할 때 로고 화면을 최소 몇 밀리초 보여줄지(1800 = 1.8초). 0 이면 바로 닫힘.",
+    "family: 가족 프로필. enabled=false 면 추가 버튼이 사라짐, maxProfiles=최대 개수, adToAdd=true 면 추가할 때 보상형 광고를 끝까지 봐야 함(false 면 바로 추가).",
+    "debug.rewardedTest: true 면 설정 창에 '보상형 광고 시험(개발용)' 줄이 생겨요. 보상형 광고가 잘 받아지고 보상이 오는지 확인할 때만 쓰고, 평소엔 false 로 둬요.",
+    "ads.enabled: false 로 하면 이 앱의 모든 광고(앱오프닝·전면·보상형·배너)가 꺼져요. Meta·AdMob 어느 쪽으로도 광고 요청을 보내지 않고, 가족 프로필 추가는 광고 없이 바로 돼요. 광고를 다시 켜려면 true.",
+    "ads.provider: \"admob\"(기본) 또는 \"meta\". meta 로 바꿔도 아래 meta 광고 ID 가 빈 형식은 자동으로 AdMob 으로 나와요(Android 만 Meta 지원, 앱오프닝은 항상 AdMob). ID 는 Meta 수익 관리자에서 앱이 검수를 통과해야 나와요(구글 플레이 주소 필요).",
+    "ads.meta: test=true 면 Meta 테스트 광고 모드(개발 중에만! 출시용은 반드시 false — true 로 두면 테스트 광고만 나오고 수익이 안 생겨요), testDevices=테스트 기기 해시 목록, android/ios 안에 banner·interstitial·rewarded 광고(placement) ID 를 채우면 돼요.",
+    "ads.fallback: \"admob\"(기본) 또는 \"none\". provider 가 meta 일 때 Meta 광고 ID 가 없는 형식을 AdMob 으로 대신 보여줄지(admob), 아예 안 보여줄지(none). none 이면 앱오프닝도 안 나와요(Meta 에는 없는 형식).",
+    "임시: 지금 meta.android 의 전면·보상형 ID 는 복지클럽 ID 가 아니라 인생 치트키 앱의 ID 이고, 테스트 모드(test:true)라서 테스트 광고만 나오고 노출이 집계되지 않아요. 복지클럽 ID 가 나오면 바꾸고 test 는 반드시 false 로!",
+    "ads.banner: true 로 바꾸면 화면 위쪽 배너 광고가 다시 나와요. 지금은 꺼 둔 상태예요.",
+    "ads.appOpen: 앱을 켤 때 나오는 광고. enabled=false 면 끔, gapMin=광고 사이 최소 간격(분, 테스트 광고 중에는 무시), skipFirstLaunch=설치 후 첫 실행은 광고 없이 시작, resumeAfterMin=앱을 나갔다 이만큼(분) 넘게 지나 돌아올 때만 다시 보여줌.",
+    "ads.interstitial: 전면광고. enabled=false 면 끔. everyViews=정책 상세를 몇 번 보고 닫을 때마다 최대 1번, minGapSec=광고 사이 최소 간격(초), firstDelaySec=앱을 켠 뒤 첫 광고까지 최소 시간(초), afterAppOpenSec=시작 광고 뒤 최소 시간(초), dailyMax=하루 최대 횟수, delayMs=닫은 뒤 광고가 뜨기까지 기다리는 시간(밀리초). 구글 정책은 '동작 2번에 1번 이하'라서 이 기본값이 훨씬 보수적이에요.",
+    "insurance.enabled: false 면 맨 아래 오른쪽 '내보험찾기' 탭이 사라져요.",
+    "insurance.title: 탭 이름, insurance.url: 열 주소.",
+    "insurance.mode: \"inapp\" = 앱 안에서 열기(뒤로가기로 앱에 돌아옴), \"external\" = 크롬 같은 바깥 브라우저로 열기."
+  ],
+  "splash": { "minMs": 1800 },
+  "family": { "enabled": true, "maxProfiles": 5, "adToAdd": true },
+  "debug": { "rewardedTest": false },
+  "ads": {
+    "enabled": false,
+    "provider": "meta",
+    "fallback": "none",
+    "meta": { "test": true, "testDevices": [], "android": { "banner": "", "interstitial": "1417179787280550_1417184697280059", "rewarded": "1417179787280550_1417184153946780" }, "ios": { "banner": "", "interstitial": "", "rewarded": "" } },
+    "banner": false,
+    "appOpen": { "enabled": true, "gapMin": 240, "skipFirstLaunch": true, "resumeAfterMin": 30 },
+    "interstitial": { "enabled": true, "everyViews": 1, "minGapSec": 600, "firstDelaySec": 90, "afterAppOpenSec": 90, "dailyMax": 5, "delayMs": 800 }
+  },
+  "insurance": {
+    "enabled": true,
+    "title": "내보험찾기",
+    "url": "https://m.insvalley.com/mini/theme/easy_find/company/l/main.jsp?landing_type=A&ac=FIV_B_PS_prisun",
+    "mode": "inapp"
+  }
+}

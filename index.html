@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>복지클럽 - 내 지원금 알리미</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header class="top"><span class="logo">복지클럽</span><span class="hbtns"><button id="btnProfile" class="ghost">내 조건</button><button id="btnSettings" class="ghost gear" aria-label="설정">⚙</button></span></header>
+  <main id="view"></main>
+  <nav class="tabs" id="tabs">
+    <button data-tab="home" class="on"><i>🏠</i>홈</button>
+    <button data-tab="mine"><i>🎯</i>내 혜택</button>
+    <button data-tab="search"><i>🔍</i>검색</button>
+    <button data-tab="alarm"><i>⭐</i>관심정책</button>
+    <button data-tab="ins" id="insTab" class="hidden"><i>🛡️</i>내보험찾기</button>
+  </nav>
+</div>
+<div id="sheet" class="sheet hidden"></div>
+<div id="onboard" class="onboard hidden"></div>
+<div id="appopen" class="appopen hidden"></div>
+<div id="splash" class="splash"><img src="logo.png" alt="복지클럽"><div class="meta">내 지원금 알리미</div></div>
+<script src="data.js"></script>
+<script src="ads.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
